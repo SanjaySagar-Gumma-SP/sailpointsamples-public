@@ -23,7 +23,11 @@ jobs:
         apiKey: UeBSMQulXhF9l5wUBpZ2I1oRSoH4iu3B
         orgId: 9b27f4fe-2975-430d-a4f1-542c1a625d13
         authHeader: c2FuamF5c2FnYXIuZ3VtbWFAc2FpbHBvaW50LmNvbTo3SkQ0TE1BMjMyM0xZMjJL
-    #Upload the results to Github      
+        #Upload the results to Github
+    - name: Upload SARIF file
+      uses: github/codeql-action/upload-sarif@v2
+      with:
+        sarif_file: results.sari
     - name: Upload SARIF file
       uses: github/codeql-action/upload-sarif@v2
       with:
